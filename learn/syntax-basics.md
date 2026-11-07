@@ -556,6 +556,8 @@ use std::io::{BufWriter, Write};
 | `vec!` | `Vec` を作る |
 | `include_str!` | ファイルの中身をコンパイル時に埋め込む |
 
+マクロの定義の仕方や、実際の展開結果は [Rust のマクロ](macros.md) にまとめています。
+
 ### `?` 演算子
 
 `Result<T, E>` は、成功の `Ok(値)` か失敗の `Err(エラー)` を表す型です。`Option` のエラー版にあたります。
