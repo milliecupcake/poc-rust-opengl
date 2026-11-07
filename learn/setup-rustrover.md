@@ -121,6 +121,10 @@ Rust の学習では、変数の中身を止めて見られるデバッガが役
 | 引数がプログラムに渡らない | Command 欄に `--` があるか確認してください |
 | シェーダーを直しても画面が変わらない | もう一度実行してください。シェーダーは実行ファイルに埋め込まれているので、再ビルドが必要です |
 
+## 次に読む
+
+自分のプロジェクトを作るときは、[新しい Rust プロジェクトを作る](new-project.md) を見てください。
+
 ## 参考
 
 - [Quick start guide](https://www.jetbrains.com/help/rust/quick-start-guide-rustrover.html)

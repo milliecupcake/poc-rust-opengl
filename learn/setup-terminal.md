@@ -135,3 +135,7 @@ sips -s format png target/cube.ppm --out target/cube.png
 | `edition 2024` や `let` に関するコンパイルエラー | Rust が古い可能性があります。`rustup update` を実行してください |
 | `linker 'cc' not found` や `xcrun` のエラー | Command Line Tools がありません。手順 1 を実行してください |
 | シェーダーを直しても画面が変わらない | `cargo run` で再ビルドしてください。シェーダーは `include_str!` で実行ファイルに埋め込まれています |
+
+## 次に読む
+
+自分のプロジェクトを作るときは、[新しい Rust プロジェクトを作る](new-project.md) を見てください。
