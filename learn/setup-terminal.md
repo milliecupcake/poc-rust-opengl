@@ -138,4 +138,5 @@ sips -s format png target/cube.ppm --out target/cube.png
 
 ## 次に読む
 
-自分のプロジェクトを作るときは、[新しい Rust プロジェクトを作る](new-project.md) を見てください。
+- 自分のプロジェクトを作るときは、[新しい Rust プロジェクトを作る](new-project.md) を見てください
+- コードの読み方は、[Rust の構文入門](syntax-basics.md) にまとめています
