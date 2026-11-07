@@ -59,6 +59,34 @@ macOS では **RustRover | Settings**（`Cmd + ,`）で開けます。
 | Homebrew（Apple Silicon） | `/opt/homebrew/opt/rustup/bin` |
 | Homebrew（Intel Mac） | `/usr/local/opt/rustup/bin` |
 
+### ツールチェーンとは
+
+Rust のプログラムを作るための道具一式のことです。コンパイラの `rustc` やビルドツールの `cargo` が含まれます。
+RustRover には Rust が付属していないので、これらの場所を指定する必要があります。
+
+### Homebrew で入れた場合
+
+Homebrew で入れた Rust は、`~/.zshrc` に PATH を設定していても自動検出されないことがあります。
+新規プロジェクトの画面で「ツールチェーンの場所」が空になり、「ツールチェーンバージョン」に「該当なし」と表示されます。
+
+この場合、Rust は入っているので、「Rustup のインストール」は押さないでください。Rust の環境が二重になります。
+代わりに、「ツールチェーンの場所」に上の表のパスを入力します（Apple Silicon で動作確認済み）。
+バージョンが表示されれば設定できています。
+
+「標準ライブラリ」が空のままなら、次のパスを入力します。`<ユーザー名>` は自分のものに置き換えてください。
+
+```text
+/Users/<ユーザー名>/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library
+```
+
+### 設定はプロジェクトごとに保存される
+
+入力したパスは、プロジェクトの `.idea/workspace.xml` に保存されます。
+そのため、別のプロジェクトを作るときに、もう一度入力が必要になることがあります。
+
+毎回の入力を省くには、**File | New Projects Setup | Settings for New Projects** の Rust の設定に、同じパスを入れる方法があります。
+この方法で既定値にできるかは未検証です。効かないときは、「ツールチェーンの場所」の `∨` に候補が出ていないか確認してください。
+
 ## 5. 実行する
 
 いちばん簡単なのは、`src/main.rs` を開いて `fn main()` の左にある緑の ▶ をクリックし、**Run** を選ぶ方法です。
